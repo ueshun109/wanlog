@@ -14,7 +14,7 @@ void main() {
     final beforeDate = NotificationDate(1, TimeUnit.hour, DateTime.now());
     final afterDate = NotificationDate(20, TimeUnit.minutes, DateTime.now());
     expect(beforeDate.compareTo(afterDate), -1);
-    expect(x.compareTo(beforeDate), 1);
+    expect(afterDate.compareTo(beforeDate), 1);
   });
 
   test("compareToMinutesAndDay", () {
