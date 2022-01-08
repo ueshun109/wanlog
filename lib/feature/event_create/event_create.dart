@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wanlog/components/date_time_picker.dart';
 import 'package:wanlog/components/toggle.dart';
-import 'package:wanlog/notification_select_sheet.dart';
+import 'package:wanlog/feature/event_create/notification_select_sheet.dart';
 import 'package:wanlog/styleguide/buttons.dart';
 import 'package:wanlog/styleguide/font.dart';
 import 'package:wanlog/styleguide/space.dart';

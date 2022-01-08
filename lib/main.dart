@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wanlog/event_create.dart';
+import 'package:wanlog/feature/event_create/event_create.dart';
 
 void main() {
   runApp(const MyApp());
