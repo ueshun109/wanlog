@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:wanlog/components/date_time_picker.dart';
 import 'package:wanlog/components/toggle.dart';
+import 'package:wanlog/notification_select_sheet.dart';
+import 'package:wanlog/styleguide/buttons.dart';
 import 'package:wanlog/styleguide/font.dart';
 import 'package:wanlog/styleguide/space.dart';
 
@@ -81,17 +83,28 @@ class _EventCreatePageState extends State<EventCreatePage> {
                         ),
                       ],
                     ),
-                    Container(
-                      height: 200,
-                      color: Colors.blue,
-                    ),
-                    Container(
-                      height: 200,
-                      color: Colors.red,
-                    ),
-                    Container(
-                      height: 200,
-                      color: Colors.yellow,
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: Spacing.medium),
+                          child: TextButton.icon(
+                            onPressed: () {
+                              showModalBottomSheet(
+                                  context: context,
+                                  shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.vertical(top: Radius.circular(16))
+                                  ),
+                                  builder: (context) => NotificationSelectSheet(selectDate: (date) {
+
+                                  }, timestamp: DateTime.now(),)
+                              );
+                            },
+                            icon: const Icon(Icons.notifications_none),
+                            label: Text("通知なし"),
+                            style: TextButtonStyle.primary,
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
